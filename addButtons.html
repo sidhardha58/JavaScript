@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Buttons</title>
+  </head>
+  <body>
+    <button class="child">Add Button</button>
+    <script>
+      const body = document.querySelector("body");
+      const btn = document.querySelector(".child");
+      let childCount = 0;
+      btn.addEventListener("click", () => {
+        childCount++;
+        const newBtn = document.createElement("button");
+        newBtn.className = "child";
+        newBtn.textContent = `Button ${childCount}`;
+        body.appendChild(newBtn);
+      });
+    </script>
+  </body>
+</html>
