@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Manipulation Example</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-heading">Learning DOM Manipulation</h1>
+      <p id="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <ul id="items">
+        <li class="category">Item 1</li>
+        <li class="category" id="remove-this">Item 2</li>
+        <li class="category">Item 3</li>
+        <li class="category">Item 4</li>
+      </ul>
+    </div>
+    <script>
+      // Task 5: Remove paragraph element with ID 'description'
+      const elementToRemove = document.getElementById("description");
+      elementToRemove.remove();
+
+      // Task 6: Remove list item with ID 'remove-this'
+      const listParent = document.getElementById("items");
+      const listItem = document.getElementById("remove-this");
+      listParent.removeChild(listItem);
+    </script>
+  </body>
+</html>
